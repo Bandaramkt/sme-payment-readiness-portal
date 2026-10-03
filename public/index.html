@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+
+
+  <meta
+
+    name="viewport"
+
+    content="width=device-width, initial-scale=1.0"
+
+  >
+
+
+
+  <title>SME Payment Readiness Portal</title>
+
+
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+
+<body><!-- Main Navigation -->
+
+<nav class="main-navigation">
+
+  <a href="#homeSection" class="portal-brand" id="portalBrand">
+
+    <span class="brand-icon">◆</span>
+
+
+
+    <span>
+
+      <strong>SME Payment Portal</strong>
+
+      <small>Readiness & Support</small>
+
+    </span>
+
+  </a>
+
+
+
+  <button
+
+    id="mobileMenuButton"
+
+    class="mobile-menu-button"
+
+    type="button"
+
+    aria-label="Open navigation menu"
+
+  >
+
+    ☰
+
+  </button>
+
+
+
+  <div id="navigationLinks" class="navigation-links">
+
+    <button id="homeNav" type="button">Home</button>
+
+    <button id="dashboardNav" type="button">Dashboard</button>
+
+    <a href="#accountSection">Account</a>
+
+
+
+    <button id="assessmentNav" type="button">
+
+      Assessment
+
+    </button>
+
+
+
+    <button id="historyNav" type="button">
+
+      History
+
+    </button>
+
+
+
+    <button id="progressNav" type="button">
+
+      Progress
+
+    </button>
+
+
+
+    <button id="supportNav" type="button">
+
+      Support
+
+    </button>
+
+  </div>
+
+</nav>
+
+
+
+  <header class="main-header">
+
+    <div class="logo">
+
+      SME <span>PAYMENT READY</span>
+
+    </div>
+
+
+
+    <div class="prototype-label">
+
+      ACADEMIC PROTOTYPE
+
+    </div>
+
+  </header>
+
+
+
+  <main><!-- User Account Section -->
+
+    <section id="dashboard" class="page-section dashboard-section">
+
+  <div class="section-heading">
+
+    <p class="section-label">SME READINESS OVERVIEW</p>
+
+    <h2>Digital Payment Dashboard</h2>
+
+    <p>Review your latest readiness level and areas that need attention.</p>
+
+  </div>
+
+
+
+  <div class="dashboard-cards">
+
+    <div class="dashboard-card score-card">
+
+      <span class="card-icon">📊</span>
+
+      <div>
+
+        <p>Overall Readiness</p>
+
+        <h3 id="dashboardScore">--%</h3>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="dashboard-card">
+
+      <span class="card-icon">🚀</span>
+
+      <div>
+
+        <p>Readiness Level</p>
+
+        <h3 id="dashboardLevel">Not Assessed</h3>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="dashboard-card">
+
+      <span class="card-icon">⭐</span>
+
+      <div>
+
+        <p>Strongest Area</p>
+
+        <h3 id="dashboardStrongest">No result</h3>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="dashboard-card">
+
+      <span class="card-icon">🎯</span>
+
+      <div>
+
+        <p>Priority Area</p>
+
+        <h3 id="dashboardPriority">No result</h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="dashboard-content">
+
+    <div class="dashboard-panel">
+
+      <div class="panel-heading">
+
+        <div>
+
+          <p class="section-label">LATEST ASSESSMENT</p>
+
+          <h3>Readiness Scores</h3>
+
+        </div>
+
+
+
+        <button type="button" class="small-button" onclick="showSection('assessmentSection'); displayQuestion();">
+
+          New Assessment
+
+        </button>
+
+      </div>
+
+
+
+      <div class="score-row">
+
+        <div class="score-label">
+
+          <span>Digital Payment Adoption</span>
+
+          <strong id="dpaValue">0%</strong>
+
+        </div>
+
+        <div class="progress-track">
+
+          <div id="dpaBar" class="progress-fill"></div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="score-row">
+
+        <div class="score-label">
+
+          <span>Infrastructure Availability</span>
+
+          <strong id="iaValue">0%</strong>
+
+        </div>
+
+        <div class="progress-track">
+
+          <div id="iaBar" class="progress-fill"></div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="score-row">
+
+        <div class="score-label">
+
+          <span>Digital Financial Literacy</span>
+
+          <strong id="dflValue">0%</strong>
+
+        </div>
+
+        <div class="progress-track">
+
+          <div id="dflBar" class="progress-fill"></div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="score-row">
+
+        <div class="score-label">
+
+          <span>Perceived Usefulness</span>
+
+          <strong id="puValue">0%</strong>
+
+        </div>
+
+        <div class="progress-track">
+
+          <div id="puBar" class="progress-fill"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="dashboard-panel action-panel">
+
+      <p class="section-label">PERSONALISED GUIDANCE</p>
+
+      <h3>Recommended Next Step</h3>
+
+
+
+      <div class="action-icon">💡</div>
+
+
+
+      <p id="dashboardRecommendation">
+
+        Complete the readiness assessment to receive a recommendation based
+
+        on your business needs.
+
+      </p>
+
+
+
+      <button type="button" class="primary-button" onclick="showSection('assessmentSection'); displayQuestion();">
+
+        Start Assessment
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="account-section" id="accountSection">
+
+  <div class="account-heading">
+
+    <div>
+
+      <p class="section-label">SME ACCOUNT</p>
+
+      <h2>Create an account or log in</h2>
+
+      <p>
+
+        Save your assessment results and monitor your digital-payment
+
+        readiness over time.
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <div id="authForms" class="auth-grid">
+
+    <!-- Registration Form -->
+
+    <form id="registerForm" class="account-card">
+
+      <h3>Create Account</h3>
+
+
+
+      <label for="registerBusinessName">Business Name</label>
+
+      <input
+
+        id="registerBusinessName"
+
+        type="text"
+
+        placeholder="Enter business name"
+
+        required
+
+      >
+
+
+
+      <label for="registerCategory">Business Category</label>
+
+      <select id="registerCategory" required>
+
+        <option value="">Select business category</option>
+
+        <option value="Manufacturing">Manufacturing</option>
+
+        <option value="Retail">Retail</option>
+
+        <option value="Service">Service</option>
+
+      </select>
+
+
+
+      <label for="registerEmail">Email Address</label>
+
+      <input
+
+        id="registerEmail"
+
+        type="email"
+
+        placeholder="Enter email address"
+
+        required
+
+      >
+
+
+
+      <label for="registerPassword">Password</label>
+
+      <input
+
+        id="registerPassword"
+
+        type="password"
+
+        placeholder="Minimum 6 characters"
+
+        minlength="6"
+
+        required
+
+      >
+
+
+
+      <button type="submit">Create Account</button>
+
+
+
+      <p id="registerMessage" class="form-message"></p>
+
+    </form>
+
+
+
+    <!-- Login Form -->
+
+    <form id="loginForm" class="account-card">
+
+      <h3>Log In</h3>
+
+
+
+      <label for="loginEmail">Email Address</label>
+
+      <input
+
+        id="loginEmail"
+
+        type="email"
+
+        placeholder="Enter email address"
+
+        required
+
+      >
+
+
+
+      <label for="loginPassword">Password</label>
+
+      <input
+
+        id="loginPassword"
+
+        type="password"
+
+        placeholder="Enter password"
+
+        required
+
+      >
+
+
+
+      <button type="submit">Log In</button>
+
+
+
+      <p id="loginMessage" class="form-message"></p>
+
+    </form>
+
+  </div>
+
+
+
+  <!-- Logged-in User Panel -->
+
+  <div id="userPanel" class="user-panel hidden">
+
+    <div>
+
+      <p class="section-label">SIGNED IN</p>
+
+      <h3 id="welcomeUser">Welcome</h3>
+
+      <p id="userBusinessDetails"></p>
+
+    </div>
+
+
+
+    <div class="user-actions">
+
+      <button id="viewHistoryButton" type="button">
+
+        Assessment History
+
+      </button>
+
+
+
+      <button id="viewProgressButton" type="button">
+
+        View Progress
+
+      </button>
+
+
+
+      <button id="logoutButton" type="button" class="secondary-button">
+
+        Log Out
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- History and Progress -->
+
+  <div id="accountResults" class="account-results hidden">
+
+    <h3 id="accountResultsTitle">Assessment Progress</h3>
+
+    <div id="accountResultsContent"></div>
+
+  </div>
+
+</section>
+
+
+
+    <!-- Welcome Section -->
+
+
+
+    <section id="homeSection" class="page-section active">
+
+
+
+      <p class="small-title">
+
+        DIGITAL PAYMENT READINESS
+
+      </p>
+
+
+
+      <h1>
+
+        Understand where your business stands.
+
+      </h1>
+
+
+
+      <p class="introduction">
+
+        Complete a short assessment across four digital-payment
+
+        readiness areas and receive practical guidance for your SME.
+
+      </p>
+
+
+
+      <div class="factor-grid">
+
+
+
+        <div class="factor-card">
+
+          <span>01</span>
+
+          <h3>Digital Payment Adoption</h3>
+
+          <p>
+
+            How regularly digital payment methods are used
+
+            in business activities.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="factor-card">
+
+          <span>02</span>
+
+          <h3>Infrastructure Availability</h3>
+
+          <p>
+
+            The availability of reliable internet, devices,
+
+            and technical support.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="factor-card">
+
+          <span>03</span>
+
+          <h3>Digital Financial Literacy</h3>
+
+          <p>
+
+            Knowledge and confidence required to use
+
+            digital payments correctly and safely.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="factor-card">
+
+          <span>04</span>
+
+          <h3>Perceived Usefulness</h3>
+
+          <p>
+
+            The practical value of digital payments
+
+            for everyday business activities.
+
+          </p>
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <button id="startButton" class="primary-button">
+
+        Start Readiness Assessment
+
+      </button>
+
+
+
+      <p class="privacy-note">
+
+        This portal does not permanently store personal or
+
+        financial information.
+
+      </p>
+
+
+
+    </section>
+
+
+
+
+
+    <!-- Assessment Section -->
+
+
+
+    <section id="assessmentSection" class="page-section">
+
+
+
+      <div class="progress-information">
+
+
+
+        <span id="factorName">
+
+          Digital Payment Adoption
+
+        </span>
+
+
+
+        <span id="questionProgress">
+
+          Question 1 of 12
+
+        </span>
+
+
+
+      </div>
+
+
+
+      <div class="progress-container">
+
+        <div id="progressBar" class="progress-bar"></div>
+
+      </div>
+
+
+
+      <div class="question-card">
+
+
+
+        <p id="questionNumber" class="small-title">
+
+          QUESTION 01
+
+        </p>
+
+
+
+        <h2 id="questionText">
+
+          Assessment question
+
+        </h2>
+
+
+
+        <div id="answerOptions" class="answer-options"></div>
+
+
+
+        <div class="button-row">
+
+
+
+          <button id="backButton" class="secondary-button">
+
+            Back
+
+          </button>
+
+
+
+          <button
+
+            id="nextButton"
+
+            class="primary-button"
+
+            disabled
+
+          >
+
+            Next
+
+          </button>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+    <!-- Results Section -->
+
+
+
+    <section id="resultsSection" class="page-section">
+
+
+
+      <p class="small-title">
+
+        YOUR READINESS DASHBOARD
+
+      </p>
+
+
+
+      <h1>Your Assessment Result</h1>
+
+
+
+      <div class="main-result-grid">
+
+
+
+        <div class="overall-score-card">
+
+
+
+          <p>Overall Readiness Score</p>
+
+
+
+          <strong id="overallScore">
+
+            0%
+
+          </strong>
+
+
+
+          <span id="readinessLevel">
+
+            Readiness Level
+
+          </span>
+
+
+
+        </div>
+
+
+
+        <div class="result-summary-card">
+
+
+
+          <div>
+
+            <h3>Strongest Area</h3>
+
+            <p id="strongestArea"></p>
+
+          </div>
+
+
+
+          <div>
+
+            <h3>Priority Area</h3>
+
+            <p id="priorityArea"></p>
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div id="factorResults" class="factor-results"></div>
+
+
+
+      <div class="recommendation-card">
+
+
+
+        <h3>Recommended Next Step</h3>
+
+
+
+        <p id="recommendationText"></p>
+
+
+
+      </div>
+
+
+
+      <div class="button-row">
+
+
+
+        <button id="retakeButton" class="secondary-button">
+
+          Retake Assessment
+
+        </button>
+
+
+
+        <button
+
+          class="primary-button"
+
+          onclick="window.print()"
+
+        >
+
+          Print Result
+
+        </button>
+
+
+
+      </div>
+
+
+
+      <p class="privacy-note">
+
+        These scores provide proposed guidance and are not
+
+        empirically validated diagnostic thresholds.
+
+      </p>
+
+
+
+    </section>
+
+
+
+  </main>
+
+
+
+  <footer>
+
+    Research-based digital payment readiness prototype for Sri Lankan SMEs
+
+  </footer>
+
+<!-- Chatbot Button -->
+
+<!-- Animated Chatbot Helper -->
+
+<div id="chatbotHelper" class="chatbot-helper">
+
+  <span class="helper-hand">👋</span>
+
+
+
+  <div class="helper-text">
+
+    <strong>Need help?</strong>
+
+    <small>Ask our SME assistant</small>
+
+  </div>
+
+</div>
+
+
+
+<!-- Chatbot Button -->
+
+<button
+
+  id="chatbotButton"
+
+  class="chatbot-button"
+
+  type="button"
+
+  aria-label="Open chatbot"
+
+\>
+
+  💬
+
+</button>
+
+</button>
+
+
+
+<!-- Chatbot Window -->
+
+<div id="chatbotWindow" class="chatbot-window">
+
+  <div class="chatbot-header">
+
+    <div>
+
+      <strong>SME Support Assistant</strong>
+
+      <small>Digital payment guidance</small>
+
+    </div>
+
+
+
+    <button id="closeChatbot" class="close-chatbot" type="button">
+
+      ×
+
+    </button>
+
+  </div>
+
+
+
+  <div id="chatMessages" class="chat-messages">
+
+    <div class="bot-message">
+
+      Hello! How can I help you with digital payment readiness?
+
+    </div>
+
+  </div>
+
+
+
+  <div class="quick-questions">
+
+    <button type="button" data-question="Which payment method is suitable?">
+
+      Payment Methods
+
+    </button>
+
+
+
+    <button type="button" data-question="How can I improve payment security?">
+
+      Payment Security
+
+    </button>
+
+
+
+    <button type="button" data-question="How can I improve my infrastructure?">
+
+      Infrastructure
+
+    </button>
+
+  </div>
+
+
+
+  <form id="chatForm" class="chat-input-row">
+
+    <input
+
+      id="chatInput"
+
+      type="text"
+
+      placeholder="Type your question..."
+
+      autocomplete="off"
+
+      required
+
+    >
+
+
+
+    <button type="submit">Send</button>
+
+  </form>
+
+</div>
+
+  <script src="app.js"></script>
+
+
+
+</body>
+
+</html>
